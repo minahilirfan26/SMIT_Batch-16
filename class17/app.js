@@ -1,36 +1,38 @@
 // ***Advanced Javascript (All ES Versions)***
 // Variable Scoping
-
 // var a;
 // console.log(a)
+// var a = "hello world";
+// a = "smit"
+
 //  a = "hello world";
 // const a = "smit";
-    // const a = "hello world";
-    // a = "smit";
-    // console.log(a)
+//     const a = "hello world";
+//     a = "smit";
+//     console.log(a)
 
 // Closure
 
 // function abc(){
-//     ///window
+//     var a = 123;
+//     //window
 //     //abc()
 //     //a
-//     var a = "smit";
-//     function xyz(){
-//         //xyz()
-//         //window
+//     function efg(){
+//         //window 
+//         //efg()
 //         //abc()
 //         //a
-//         console.log(a)
 //         function jkl(){
 //             //window
+//             //jkl;
+//             //efg
 //             //abc
-//             //xyz
-//             //jkl
 //             //a
 //         }
+//         jkl()
 //     }
-// xyz()
+//     efg()
 // }
 // abc()
 
@@ -38,6 +40,7 @@
 
 // let para = `<p>Hello world</p>`;
 // console.log(para)
+
 
 
 //Destructuring
@@ -66,15 +69,15 @@
 
 ///Default parameters
 
-// function abc(a = "saylani"){
+// function abc(a = "smit" ){
 // console.log(a)
 // }
-// abc("SMIT")
+// abc()
 
 
 //Rest parameter
 
-// function abc(a = "saylani",  ...rest){
+// function abc(a , ...rest){
 // console.log(a,  rest)
 // }
 // abc("SMIT","malir", "TTS", "web")
@@ -91,3 +94,66 @@
 
 // let obj = {...studentDetails, ...campusDetails}
 // console.log(obj)
+
+
+// let obj = {
+//     name: "minahil",
+//     email: "duashaikh603@gmail.com",
+//     age: 22,
+//     getDetails: {
+//         course: "web",
+//         school: "SMIT"
+//     }
+// }
+
+// // console.log(obj.name)
+// // console.log(obj.email)
+// let {name, email, age, getDetails: {course, school}} = obj;
+// // let {course, school} = obj.getDetails;
+// console.log(school)
+
+// let arr = ["mon", "tues", "wed"];
+// let [a,b,c] = arr
+// console.log(c)
+
+
+///Enhanced object literals
+
+// let obj = {
+//     name: "minahil",
+//     email: "duashaikh603@gmail.com",
+//     age: 22,
+//     course: "WEb & app"
+// }
+
+// console.log(obj?.getDetails?.course)
+// console.log(obj.name)
+
+// function clickFun(){
+//     alert("hello world")
+// }
+// let btn = document.getElementById("btn");
+// btn.addEventListener("click", clickFun)
+// console.log(btn)
+
+
+//CallBack
+
+// function abc(cb){
+//     setTimeout(function(){
+//         console.log("done")
+//         cb()
+//     },2000)
+// }
+
+// function callBackFun(){
+//     console.log("Completed")
+// }
+
+// abc(callBackFun)
+
+
+// let abc = ()=>{
+//     console.log(336)
+// }
+// abc()
