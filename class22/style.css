@@ -1,0 +1,9 @@
+/* #conatiner{
+    display: flex;
+    justify-content: space-around;
+} */
+
+.img{
+    object-fit: contain;
+    height: 100px;
+}
